@@ -1,0 +1,45 @@
+// Unix Epoch - January 1st 19070 00:00:00
+const now = new Date()
+const timeStamp = now.getTime()
+
+const myDate = new Date(timeStamp)
+console.log(myDate.getFullYear())
+
+// console.log(`Year: ${now.getFullYear()}`)
+// console.log(`Month: ${now.getMonth()}`)
+// console.log(`Day of month: ${now.getDate()}`)
+// console.log(`Hour: ${now.getHours()}`)
+// console.log(`Minutes: ${now.getMinutes()}`)
+// console.log(`Seconds: ${now.getSeconds()}`)
+
+// 1. Create two dates in the past (use string for date)
+// 2. Get time stamps for both
+// 3. Figure out which is first and print its time (use toString)
+
+const firstDate = new Date(`April 10, 1988 17:25:21`);
+const secondDate = new Date(`February 27, 1990 13:05:15`);
+
+const firstDateTimeStamp = firstDate.getTime()
+const secondDateTimeStamp = secondDate.getTime()
+
+if (firstDateTimeStamp < secondDateTimeStamp) {
+    console.log(firstDate.toString())
+} else if (secondDateTimeStamp < firstDateTimeStamp){
+    console.log(secondDate.toString())
+}
+// Working with time
+// const now = moment()
+// now.subtract(1, 'week').subtract(20, 'days')
+// console.log(now.format('MMM Do, YYYY'))
+// console.log(now.fromNow())
+
+// const nowTimeStamp = now.valueOf()
+// console.log(moment(nowTimeStamp).toString())
+
+// Create a new moment
+// Set the month, day and year to your birthday
+// Use format to print it in the following way april 10, 1988
+
+const now = moment()
+now.year(1988).month(3).date(10)
+console.log(now.format('MMMM D, YYYY'))
